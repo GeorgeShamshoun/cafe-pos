@@ -1,13 +1,127 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  padding: 0;
+  background: #f6f7f9;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
 }
+
+
+button,
+input,
+select {
+  transition: 0.15s ease;
+}
+
+button:not(:disabled):hover {
+  filter: brightness(0.97);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(17, 24, 39, 0.12);
+}
+
+button:not(:disabled):active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+  outline: none !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+input:disabled,
+select:disabled,
+button:disabled {
+  filter: grayscale(0.1);
+}
+
+.input-hint::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.18);
+}
+
+.item-row:hover,
+.group-row:hover,
+.user-row:hover,
+.table-row:hover {
+  background: #f8fafc;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::placeholder {
+  color: #94a3b8;   /* رمادي خفيف */
+  font-weight: 400; /* مهم جدًا */
+  font-size: 18px;  /* أصغر من النص */
+  opacity: 0.7;
+}
+@font-face {
+  font-family: "Digital";
+  src: url("./assets/fonts/DS-DIGIB.TTF") format("truetype");
+}
+
+.quick-code-input::placeholder {
+  color: #bac8dc;
+  opacity: 1;
+}
+
+
